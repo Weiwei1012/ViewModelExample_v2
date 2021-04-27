@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, MainViewModelFactory(lastValue)).get(MainViewModel::class.java)
 
         binding.viewModel = viewModel
-        //set lifecycleOwner if using observer or data binding in the layout
+        //set lifecycleOwner if using livedata in data binding directly
         binding.lifecycleOwner = this  //for activity
         //without viewmodel (version 1)
 //        binding.addButton.setOnClickListener {
